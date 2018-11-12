@@ -27,7 +27,7 @@
  * Timeout for stopping processes
  */
 #if !defined(OPLUS_FEATURE_POWERINFO_STANDBY) || !defined(CONFIG_OPLUS_WAKELOCK_PROFILER)
-unsigned int __read_mostly freeze_timeout_msecs = 20 * MSEC_PER_SEC;
+unsigned int __read_mostly freeze_timeout_msecs = 5 * MSEC_PER_SEC;
 #else
 unsigned int __read_mostly freeze_timeout_msecs = 2 * MSEC_PER_SEC;
 #endif
