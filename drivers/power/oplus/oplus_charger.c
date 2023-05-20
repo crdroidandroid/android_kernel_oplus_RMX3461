@@ -161,6 +161,11 @@ static int chgr_dbg_total_time = 0;
 module_param(chgr_dbg_total_time, int, 0644);
 MODULE_PARM_DESC(chgr_dbg_total_time, "debug charger total time");
 
+void __attribute__((weak)) oplus_set_otg_switch_status(bool value)
+{
+        return;
+}
+
 /****************************************/
 #define RESET_MCU_DELAY_30S		6
 static int reset_mcu_delay = 0;
@@ -5929,6 +5934,7 @@ static void oplus_chg_variables_init(struct oplus_chg_chip *chip)
 	chip->icon_debounce = false;
 	chip->is_abnormal_adapter = false;
 	chip->abnormal_adapter_dis_cnt = 0;
+	oplus_set_otg_switch_status(true);
 }
 
 static void oplus_chg_fail_action(struct oplus_chg_chip *chip)
