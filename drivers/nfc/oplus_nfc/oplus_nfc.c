@@ -35,7 +35,7 @@ int get_project_in_gki_mode() {
 #endif
 
 
-bool is_nfc_support()
+bool is_nfc_support(void)
 {
 	return support_nfc;
 }

@@ -21,7 +21,7 @@ extern bool oplus_set_color_mode;
 //#ifdef OPLUS_BUG_STABILITY
 bool seed_mode_flag = false;
 extern u32 bl_lvl_backup;
-extern oplus_dc_v2_on;
+extern int oplus_dc_v2_on;
 //#endif /*OPLUS_BUG_STABILITY*/
 
 #define PANEL_LOADING_EFFECT_FLAG 100
